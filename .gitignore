@@ -1,0 +1,14 @@
+
+node_modules/
+
+# Конфіг з паролями до бази
+config.js
+
+
+.env
+
+
+*.log
+
+
+.DS_Store

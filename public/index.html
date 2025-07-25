@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form id="form" action="/login" method="post">
+        <h1>Register</h1>
+
+        <input type="email" name="email" class="email" placeholder="email">
+        <input type="password" name="password" class="password" placeholder="password">
+        <!-- <input type="text" placeholder="viddil" class="viddil"> -->
+
+
+    </form>
+
+    <button class="btnLogIn" form="form">LogIN</button>
+    <button class="btnLogOut" style="margin-top: 5%;">LogOUT</button>
+
+
+    <script>
+        const password = document.querySelector('.password');
+        const email = document.querySelector('.email');
+        const btnLogOut = document.querySelector('.btnLogOut');
+        const btnLogIn = document.querySelector('.btnLogIn');
+        //   const btnPost = document.querySelector('.btnPost');
+
+        btnLogOut.addEventListener('click', async function () {
+            const res = await fetch('/logout');
+            if (res.redirected) {
+                window.location.href = res.url
+            }
+            else {
+                alert('vuishlu')
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
